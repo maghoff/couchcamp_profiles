@@ -5,8 +5,10 @@
 	{{#attachments}}
 		<img width=200 src="../../{{src}}" style="float:left; padding-right:10px;">
 	{{/attachments}}
-	<b>{{name}}</b> <br/>
-	<i>{{bio}}</i> <br/>
+	<b>{{name}}</b> 
+  {{company}} <br/>
+  {{#email}}<a href="mailto:{{email}}">{{email}}</a>{{/email}}
+	<p><i>{{bio}}</i></p> <br/>
 	<ul>
         {{#urls}}
 		<li>

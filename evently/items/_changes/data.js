@@ -3,12 +3,14 @@ function(data) {
 // 	$.log(data);
 	var items = [];
   for (var i=0; i < data.rows.length; i++) {
-	  var r = data.rows[i].value, item = {};
+	  var r = data.rows[i].value, item = {}, v=r;
 		item.bio = r.bio || "";
-		item.urls = [];
-		item.name = data.rows[i].value.name;
+		item.name = v.name;
+		item.company = v.company;
+		item.email = v.email;
 	  item.id = data.rows[i].id;
 	  item.dbname = dbname;
+		item.urls = [];
 		if (r.url) {
 				item.urls.push({url:r.url, label:"www"});
 		}

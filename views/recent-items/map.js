@@ -1,5 +1,6 @@
 function(doc) {
   if (doc.name) {
-    emit(doc._rev.split("-")[1], doc);    
+    var key = doc.created_at ? new Date(doc.created_at) : new Date("2010/09/08")
+    emit(key, doc);
   }
 }
