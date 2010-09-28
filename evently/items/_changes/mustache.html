@@ -10,10 +10,12 @@
   {{#email}}<a href="mailto:{{email}}">{{email}}</a>{{/email}}
 	<p><i>{{bio}}</i></p> <br/>
 	<ul>
-        {{#urls}}
-		<li>
-		<a href="{{url}}">{{label}}</a>
-		</li>
+	{{#urls}}
+		{{#url}}
+				<li>
+				<a href="{{url}}">{{label}}</a>
+				</li>
+		{{/url}}
 	{{/urls}}
 	</ul>
 	<a href="/_utils/document.html?{{dbname}}/{{id}}">edit in Futon</a>
